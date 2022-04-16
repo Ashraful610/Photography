@@ -1,0 +1,47 @@
+[
+    {
+        "id":1,
+        "img":"https://i.ibb.co/V3VJyyq/images-6.jpg",
+        "name":"Wedding Photography",
+        "price":20000,
+        "description":"I take the best wedding pictures in the country. Along with the photo, I made a short video of a very beautiful moment"
+    },
+    {
+        "id":2,
+        "img":"https://i.ibb.co/Bnt3gYj/images-13.jpg",
+        "name":"Gaye Holud Photography",
+        "price":15000,
+        "description":"I take the best picture of the country in Gaye Holud. I'm for gaye Holud It has a special discount and is photography with a gaye holude drone "
+    },
+    {
+        "id":3,
+        "img":"https://i.ibb.co/g3h6Mqp/images-14.jpg",
+        "name":"Motor Cycle Stunds Photography",
+        "price":25000,
+        "description":"I do awesome photography and video on the motorcycle stand. I have done International Motorcycle Stand Photography "
+    },
+    {
+        "id":4,
+        "img":"https://i.ibb.co/VQjGPpP/images-12.jpg",
+        "name":"Reg Day Photography",
+        "price":10000,
+        "description":"Reg Day is one of my favorite photography. For this, I offer 50% discount on Reg Day. I have done Reg Day photography at various universities"
+        
+    },
+    {
+        "id":5,
+        "img":"https://i.ibb.co/28zNqbM/download-2.jpg",
+        "name":"Travel Photography",
+        "price":30000,
+        "description":"It stretches my mind and perspective in new and extraordinary ways . i recomment if you want fress your mind  you go travel "
+        
+    },
+    {
+        "id":6,
+        "img":"https://i.ibb.co/T2kHbwJ/istockphoto-1139957268-170667a.jpg",
+        "name":"Happy BrithDay Photography",
+        "price":12000,
+        "description":"I give 20% discount on Happy Birthday. We do all the decorations on Happy Birthday. "
+        
+    }
+]
