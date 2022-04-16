@@ -25,7 +25,6 @@ const Banner = () => {
           />
           <Carousel.Caption>
             <h3>Wedding Photography</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -38,7 +37,6 @@ const Banner = () => {
   
           <Carousel.Caption>
             <h3>Motor Bike Stunds Photography</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -50,10 +48,7 @@ const Banner = () => {
           />
   
           <Carousel.Caption>
-            <h3>TGayer Holud Photography</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h3>Gayer Holud Photography</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -66,9 +61,6 @@ const Banner = () => {
   
           <Carousel.Caption>
             <h3>Reg Day Photography</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -81,9 +73,6 @@ const Banner = () => {
   
           <Carousel.Caption>
             <h3>Travel Photography</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -96,9 +85,6 @@ const Banner = () => {
   
           <Carousel.Caption>
             <h3> BrithDay Photography</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

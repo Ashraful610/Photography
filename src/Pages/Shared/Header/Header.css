@@ -1,6 +1,11 @@
 .link{
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     color: black;
     margin-right: 30px;
 }
+.site-name{
+    font-weight: 500;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+

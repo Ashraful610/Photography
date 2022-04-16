@@ -7,7 +7,7 @@ const Header = () => {
     return (
     <Navbar bg="light" expand="lg">
         <Container>
-            <Navbar.Brand className='fs-3'>
+            <Navbar.Brand className='fs-3 site-name'>
                 World Class Photography
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
