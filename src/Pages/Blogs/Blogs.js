@@ -3,7 +3,7 @@ import './Blogs.css'
 
 const Blogs = () => {
     return (
-        <div className='container'>
+        <div className='container mt-5'>
               <h1 className='text-center'>Question And Answer Page</h1>
               <div className='shadow p-4 m-4'>
                   <h2 className='text-center'>Difference Between Authenticaton and Authorization </h2>
@@ -22,6 +22,27 @@ const Blogs = () => {
                           </p>
                       </div>
                   </div>
+              </div>
+              <div className='shadow p-4 m-5'>
+                   <h2 className='second-question'>
+                       Why are you using firebase ? <br />
+                       What other options do you have to implement authentication ?
+                   </h2>
+                <div className='shadow p-4'>
+                    <p className='second-anwser'>
+                    Firebase is a backend system. Where we can store data for mobile or web applications. Moreover I can use it for ios or mobile operating. Moreover, firebase is a remote data base. As a result, we can access it from any device or place. Without such work we can do more different types of work very easily and do not have to pay extra for backend server. For which firebase is very dear to me and I use it. For authentication we can use Stytch, Ory, Supabase, Okta, PingIdentify, Fontegg, Authress, AuthO etc without firebase.
+                    </p>
+                </div>
+              </div>
+              <div className='shadow p-4 m-5'>
+                  <h2>
+                      What other service does firebase provide other than authenticaton
+                  </h2>
+                   <div className='shadow p-4'>
+                        <p>
+                        The things that we can do without authentication through firebase are given below. We can work with all real time data through firebase. For example - cheatapp, liveStrim etc. Basically starting from the database. Whatever we can do. For example, we can find out if an app will crash due to an error. Firebase allows us to show crash reports. Firebase is a backend system. Where we can store data for mobile or web applications. Moreover I can use it for ios or mobile operating.
+                        </p>
+                   </div>
               </div>
         </div>
     );

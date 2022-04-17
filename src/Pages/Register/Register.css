@@ -1,6 +1,9 @@
+
 @media screen and (min-width:415px){
     .title{
         font-size: 30px;
     }
-    
+    .form{
+        width: 100%;
+    }
 }
