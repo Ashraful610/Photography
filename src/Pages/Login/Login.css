@@ -1,0 +1,11 @@
+.optiona-link{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+@media screen and (max-width:415px){
+    .optiona-link{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+}
