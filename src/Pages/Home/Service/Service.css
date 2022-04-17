@@ -1,0 +1,22 @@
+.card{
+    padding: 0px 0px !important;
+    border: none;
+}
+.button-div{
+    display: flex;
+    justify-content: center;
+
+}
+.booking-btn{
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    padding: 10px 0px;
+    background-color: rgba(255, 166, 0, 0.393);
+    border-radius: 20px;
+   
+}
+.booking-btn:hover{
+    background-color: rgba(255, 166, 0, 0.854)
+
+}
