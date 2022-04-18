@@ -8,8 +8,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const Register = () => {
-    const [user ,loading,errors] = useAuthState(auth)
-    const [error ,setError] = useState('')
+    const [user ,loading,error] = useAuthState(auth)
+    const [erro ,setErro] = useState('')
 
     const nameRef = useRef()
     const emailRef = useRef()
@@ -25,11 +25,11 @@ const Register = () => {
         const confirmPassword = confirmPasswordRef.current.value
 
         if(password !== confirmPassword){
-            setError('must be match password and confirm pasword')
+            setErro('must be match password and confirm pasword')
             return
         }
 
-        setError('')
+        setErro('')
 
         createUserWithEmailAndPassword(auth , email , password)
         .then(result => {
@@ -40,7 +40,7 @@ const Register = () => {
            
         })
         .catch(error => {
-            setError(error.meassge)
+            setErro(error.meassge)
         })
     }
 
@@ -53,19 +53,14 @@ const Register = () => {
               displayName: name
           })
           .catch(error => {
-              setError(error.meassge)
+              setErro(error.meassge)
           })
     }
     //  send Email verification meassge
     const verificationCode = () => {
         sendEmailVerification(auth.currentUser)
     }
-   
-    if(user){
-        navigate('/')
-     
-    }
-   
+  
     return (
      <div className='register-form '>
          <div className='registerForm mx-auto shadow p-4'>
@@ -100,7 +95,7 @@ const Register = () => {
                     </p>
                 </Form.Group>
                     <p className='text-danger'>
-                        {error}
+                        {error || erro }
                     </p>
                 <Button variant="primary" type="submit"
                 className='w-50 mx-auto d-block '>

@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import './CheckedOutPage.css'
 
 const CheckedOutPage = () => {
    const [user] = useAuthState(auth)
@@ -21,7 +22,8 @@ const CheckedOutPage = () => {
 
   }
     return (
-           <div className='w-50 form mx-auto m-5 shadow p-4'>
+          <div className='checkedOut'>
+               <div className='w-50 form mx-auto m-5 shadow p-4'>
             <p className='text-center title'>Please Booking</p>
             <Form onSubmit={handleCheckedOut}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -52,6 +54,7 @@ const CheckedOutPage = () => {
                
            </Form>
         </div>
+     </div>
     );
 };
 

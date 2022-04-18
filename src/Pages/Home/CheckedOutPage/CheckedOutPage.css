@@ -1,0 +1,9 @@
+.checkedOut{
+    margin-top: 150px;
+}
+@media screen and (max-width:415px) {
+    .checkedOut{
+        margin-top: 100px;
+    }
+    
+}
