@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
 import {FacebookAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup} from 'firebase/auth'
 import auth from '../../firebase.init'
@@ -12,10 +12,9 @@ const Login = () => {
     const passwordRef = useRef()
     
     const navigate = useNavigate()
+    const location = useLocation()
 
-    if(user){
-        navigate('/')
-    }
+    const from = location.state?.from?.pathname || "/";
 
     const handleLogIn  = event => {
         event.preventDefault()
@@ -26,6 +25,7 @@ const Login = () => {
         .then(result => {
             const user =result.user
             setUser(user)
+            navigate(from, { replace: true });
             console.log(user)
         })
         .catch(error => {
@@ -41,7 +41,7 @@ const Login = () => {
         .then(result => {
             const user = result.user
             setUser(user)
-            console.log(user)
+            navigate(from, { replace: true });
         })
         .catch(error => {
             setError(error.meassge)
@@ -56,7 +56,7 @@ const Login = () => {
         .then(result => {
             const user = result.user
             setUser(user)
-            console.log(user)
+            navigate(from, { replace: true });
         })
         .catch(error => {
             setError(error.meassge)

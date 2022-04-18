@@ -9,6 +9,9 @@ import LogIn from './Pages/Login/Login'
 import Register from './Pages/Register/Register'
 import NotFound from './Pages/Shared/NotFound/NotFound'
 import Footer from './Pages/Shared/Footer/Footer'
+import CheckedOutPage from './Pages/Home/CheckedOutPage/CheckedOutPage';
+import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
+import ShowToast from './Pages/Shared/ShowToast/ShowToast';
 
 function App() {
 
@@ -21,9 +24,15 @@ function App() {
                 <Route path='/aboutme' element={<AboutMe></AboutMe>}></Route>
                 <Route path='/login' element={<LogIn></LogIn>}></Route>
                 <Route path="/register" element={<Register></Register>}></Route>
+                <Route path='/checkedOutpage' element={
+                  <RequireAuth>
+                        <CheckedOutPage></CheckedOutPage>
+                  </RequireAuth>}>
+                </Route>
                 <Route path='*' element={<NotFound></NotFound>}></Route>
          </Routes>
          <Footer></Footer>
+        
     </div>
   );
 }

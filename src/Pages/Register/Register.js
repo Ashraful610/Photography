@@ -4,6 +4,12 @@ import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } 
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const Register = () => {
     const [user , setUser] = useState({})
     const [error , setError] = useState('')
@@ -14,10 +20,6 @@ const Register = () => {
     const confirmPasswordRef = useRef()
    
     const navigate = useNavigate()
-
-    if(user){
-        navigate('/')
-    }
 
     const handleRegister = event => {
         event.preventDefault()
@@ -56,10 +58,26 @@ const Register = () => {
     //  send Email verification meassge
     const verificationCode = () => {
         sendEmailVerification(auth.currentUser)
-        .then(() => {
-            console.log('send verification code')
-        })
+           showToast()
     }
+
+   const showToast = () => {
+      const handle = () => {
+        toast('send verification')
+      }   
+       
+       <ToastContainer></ToastContainer>
+   }
+    
+
+
+
+    if(user){
+        navigate('/')
+    }
+  
+   
+ 
     return (
         <div className='w-50 form mx-auto m-5 shadow p-4'>
             <p className='text-center title'>Please Register</p>
@@ -76,12 +94,12 @@ const Register = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control ref={confirmPasswordRef} type="password" placeholder="Password" required />
+                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" placeholder="Confirm Password" required />
+                    <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -98,6 +116,10 @@ const Register = () => {
                 <Button variant="primary" type="submit">
                     Register
                 </Button>
+                <br />
+                <br />
+              
+              
            </Form>
         </div>
     );

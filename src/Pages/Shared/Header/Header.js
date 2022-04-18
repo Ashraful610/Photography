@@ -1,6 +1,6 @@
 import React from 'react';
 import {  Nav, Navbar} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import CustomLink from '../CustomLink/CustomLink';
 import './Header.css'
 import logo from '../../imges/logo/logo.jpg'
 import auth from '../../../firebase.init';
@@ -27,15 +27,16 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-                    <Link  className='link' to='/'>Home</Link>
-                    <Link  className='link' to='/blogs'>Blogs</Link>
-                    <Link  className='link' to='/aboutme'>About Me</Link>
+                    <CustomLink className='link' to='/'>Home</CustomLink>
+                    <CustomLink className='link' to='/blogs'>Blogs</CustomLink>
+                    <CustomLink className='link' to='/aboutme'>About Me</CustomLink>
                   { 
                     user?.uid ? 
-                     <button className='link logOut' onClick={handleLogOut}>Log Out</button> :
-                   <Link  className='link' to='/login'>Log In</Link>}
+                     <button className='link  logOut' onClick={handleLogOut}>Log Out</button> :
+                   <CustomLink className='link' to='/login'>Log In</CustomLink>
+                   }
 
-                    <Link  className='link' to='/register'>Register</Link>
+                    <CustomLink className='link' to='/register'>Register</CustomLink>
               </Nav>
             </Navbar.Collapse>
     

@@ -1,8 +1,14 @@
 import React from 'react';
 import { Card} from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Service.css'
 const Service = ({service}) => {
     const {name,price , img , description} = service
+    const navigate = useNavigate()
+    const handleUser = event => {
+        event.preventDefault()
+            navigate('/checkedOutPage')
+    }
     return (
         <div className='shadow card'>
            <Card>
@@ -14,7 +20,7 @@ const Service = ({service}) => {
                          <span className='fs-6 fw-bold'> Description </span> :  {description}
                     </Card.Text>
                     <div className='button-div'>
-                        <button className='booking-btn'>Booking Now</button>
+                        <button className='booking-btn' onClick={handleUser}>Booking Now</button>
                     </div>
                 </Card.Body>
          </Card>
