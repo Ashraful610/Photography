@@ -3,6 +3,7 @@
 World Class Photography [Live website link](https://assignment-firebase-10.web.app/).
 
 ## The work that has been done in this project
+ <hr/>
 - Responsive navbar created 
 - Carousels have been used as the banner of the website with pictures
 - The services that I provide are shown through the card
