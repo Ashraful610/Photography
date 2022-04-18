@@ -1,3 +1,6 @@
+.allAnswer{
+    margin-top: 120px;
+}
 .first-answer{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -7,6 +10,9 @@
     text-align: center;
 }
 @media screen and (max-width:415px){
+    .allAnswer{
+        margin-top: 100px;
+    }
     .first-answer{
         display: grid;
         grid-template-columns: repeat(1,1fr);

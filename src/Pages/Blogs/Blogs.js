@@ -3,8 +3,8 @@ import './Blogs.css'
 
 const Blogs = () => {
     return (
-        <div className='container mt-5'>
-              <h1 className='text-center'>Question And Answer Page</h1>
+        <div className='container allAnswer'>
+              <h1 className='text-center'> Answer Page</h1>
               <div className='shadow p-4 m-4'>
                   <h2 className='text-center'>Difference Between Authenticaton and Authorization </h2>
                   <div className='first-answer mt-4'>
