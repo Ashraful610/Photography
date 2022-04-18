@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+# World Class Photography
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+World Class Photography [Live website link](https://assignment-firebase-10.web.app/).
+
+## The work that has been done in this project
+- Responsive navbar created 
+- Carousels have been used as the banner of the website with pictures
+- The services that I provide are shown through the card
+- I have created a booking button through which anyone logged in can booking me
+- Made a Responsive Footer. Inside which is shown the last event I did. Moreover, my address has been given
+- I have created a blog route where the question has been answered
+- I have created a route called About Me where my name, my identity, my plans for the next three to four months are mentioned.
+- A login form has been created for logging in
+- Registration form has been created for registration
+ 
+  <hr>
+
+## These are the technologies that have been used in this project
+1 . React 
+2 . React Router
+3 . React Boostrap
+4 . React Firebase Hooks
+5 . Firebase
+6 . Boostrap 
+
 
 ## Available Scripts
 
