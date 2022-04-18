@@ -1,0 +1,39 @@
+.profile{
+    background-color: black;
+}
+
+.profile-img{
+   display: flex;
+   justify-content: center;
+}
+.profile-img img{
+    width: 200px;
+    height: 250px;
+    border-radius: 100px;
+}
+.my-goal{
+    font-size: 20px;
+}
+.about-logo{
+    width: 300px;
+    height: 200px;
+}
+.logo-div{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+@media screen  and (max-width:415px){
+    .profile-img img{
+        width: 150px;
+        height: 150px;
+    }
+    .about-logo{
+        width: 200px;
+        height: 150px;
+    }
+    .email{
+        font-size: 18px;
+    }
+    
+}
