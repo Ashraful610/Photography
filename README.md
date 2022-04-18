@@ -16,12 +16,12 @@ World Class Photography [Live website link](https://assignment-firebase-10.web.a
   <hr>
 
 ## These are the technologies that have been used in this project
-1 . React 
-2 . React Router
-3 . React Boostrap
-4 . React Firebase Hooks
-5 . Firebase
-6 . Boostrap 
+1 . React  <br/>
+2 . React Router <br/>
+3 . React Boostrap <br/>
+4 . React Firebase Hooks <br/>
+5 . Firebase <br/>
+6 . Boostrap <br/>
 
 
 ## Available Scripts
