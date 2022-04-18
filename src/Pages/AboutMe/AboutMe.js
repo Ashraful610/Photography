@@ -5,8 +5,8 @@ import logo from '../imges/logo/logo.jpg'
 
 const AboutMe = () => {
     return (
-        <div className='container mt-5 mb-5'>
-             <div className="row m-2 p-4">
+        <div className='container about-container mb-5'>
+             <div className="row m-2  p-4">
                  <div className="col-lg-4 shadow p-4 profile m-2">
                       <h2 className='text-center text-white mb-4'>Profile</h2>
                        <div className='profile-img'>

@@ -1,11 +1,25 @@
-.optiona-link{
-    padding-left: 100px;
-    padding-right: 100px;
+.optional-link{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.login-form{
+   margin-top: 120px;
+   margin-bottom: 100px;
+}
+.logInForm{
+    width: 600px;
 }
 @media screen and (max-width:415px){
-    .optiona-link{
-        padding-left: 50px;
-        padding-right: 50px;
+    .login-form{
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+    .logInForm{
+        width: 350px;
+    }
+    .optional-link{
+        padding-left: 30px;
+        padding-right: 30px;
     }
     
 }

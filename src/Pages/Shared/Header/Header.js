@@ -13,7 +13,7 @@ const Header = () => {
        signOut(auth)
     }
     return (
-    <Navbar className='navbar' expand="lg">
+    <Navbar className='navbar mb-4' fixed='top' expand="lg">
             <Navbar.Brand>
               <div className='logo-site-name'>
                   <div>

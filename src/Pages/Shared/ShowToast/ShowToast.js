@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
 const ShowToast = () => {
-    const [toasts , setToasts] = useState('')
 
     const handleToast = () => {
-          toast('verification successful')
+          toast('send verificaiton')
     }
 
     return (
         <div>
-             <>
-              handleToast()
-              </>
+           {
+               handleToast()
+           }
             <ToastContainer></ToastContainer>
         </div>
     );

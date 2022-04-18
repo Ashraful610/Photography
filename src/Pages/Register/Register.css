@@ -1,9 +1,22 @@
-
-@media screen and (min-width:415px){
+.register-form{
+    margin-top: 120px;
+   margin-bottom: 100px;
+}
+.registerForm{
+    width: 600px;
+}
+.title{
+    font-size: 30px;
+}
+@media screen and (max-width:415px) {
     .title{
         font-size: 30px;
     }
-    .form{
-        width: 100%;
+    .register-form{
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+    .registerForm{
+        width: 350px;
     }
 }

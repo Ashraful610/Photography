@@ -4,11 +4,12 @@ import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } 
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const Register = () => {
-    const [user , setUser] = useState({})
-    const [error , setError] = useState('')
+    const [user ,loading,errors] = useAuthState(auth)
+    const [error ,setError] = useState('')
 
     const nameRef = useRef()
     const emailRef = useRef()
@@ -27,19 +28,23 @@ const Register = () => {
             setError('must be match password and confirm pasword')
             return
         }
+
         setError('')
 
         createUserWithEmailAndPassword(auth , email , password)
         .then(result => {
             const user = result.user
-            setUser(user)
+            console.log(user)
             setUserName()
             verificationCode()
+           
         })
         .catch(error => {
             setError(error.meassge)
         })
     }
+
+  
 
     //   set user name in account
     const setUserName = () => {
@@ -54,16 +59,16 @@ const Register = () => {
     //  send Email verification meassge
     const verificationCode = () => {
         sendEmailVerification(auth.currentUser)
-       
     }
+   
     if(user){
         navigate('/')
+     
     }
-  
    
- 
     return (
-        <div className='w-50 form mx-auto m-5 shadow p-4'>
+     <div className='register-form '>
+         <div className='registerForm mx-auto shadow p-4'>
             <p className='text-center title'>Please Register</p>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -97,15 +102,16 @@ const Register = () => {
                     <p className='text-danger'>
                         {error}
                     </p>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit"
+                className='w-50 mx-auto d-block '>
+                   
                     Register
                 </Button>
                 <br />
-                <br />
-              
-              
+                <br />   
            </Form>
         </div>
+    </div>
     );
 };
 
