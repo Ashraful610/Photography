@@ -4,10 +4,6 @@ import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } 
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
-import { ToastContainer, toast } from 'react-toastify';
-
-import 'react-toastify/dist/ReactToastify.css';
-
 
 
 const Register = () => {
@@ -58,20 +54,8 @@ const Register = () => {
     //  send Email verification meassge
     const verificationCode = () => {
         sendEmailVerification(auth.currentUser)
-           showToast()
-    }
-
-   const showToast = () => {
-      const handle = () => {
-        toast('send verification')
-      }   
        
-       <ToastContainer></ToastContainer>
-   }
-    
-
-
-
+    }
     if(user){
         navigate('/')
     }

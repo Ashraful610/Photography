@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
 const ShowToast = () => {
+    const [toasts , setToasts] = useState('')
 
     const handleToast = () => {
           toast('verification successful')
@@ -11,7 +12,9 @@ const ShowToast = () => {
 
     return (
         <div>
-            <button onClick={handleToast} >Send Email</button>
+             <>
+              handleToast()
+              </>
             <ToastContainer></ToastContainer>
         </div>
     );
