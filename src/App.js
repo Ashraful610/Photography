@@ -12,6 +12,7 @@ import Footer from './Pages/Shared/Footer/Footer'
 import CheckedOutPage from './Pages/Home/CheckedOutPage/CheckedOutPage';
 import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
 import ShowToast from './Pages/Shared/ShowToast/ShowToast';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
                 <Route path='*' element={<NotFound></NotFound>}></Route>
          </Routes>
          <Footer></Footer>
-        
+         <Toaster></Toaster>
     </div>
   );
 }

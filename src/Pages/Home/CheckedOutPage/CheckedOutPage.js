@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
 import auth from '../../../firebase.init';
 import './CheckedOutPage.css'
 
@@ -19,36 +20,58 @@ const CheckedOutPage = () => {
       const email = emailRef.current.value
       const address = addressRef.current.value
       const phone = phoneRef.current.value
-
+      if(name ==='' && email === '' && address === '' && phone === ''){
+          setError('name ,email ,address and phone is required')
+      }
+       else if(name ===''){
+           setError('name is required')
+       }
+       else if(email === ''){
+           setError('email is required')
+       }
+       else if(address === ''){
+           setError('address is required')
+       }
+       else if(phone === ''){
+           setError('phone is required')
+       }
+       else if(phone.length < 10){
+            setError('phone number must be at least 10 characters')
+       }     
+       else{
+        toast.success('Successfully booking')
+        setError('')
+       }  
+       
   }
     return (
           <div className='checkedOut'>
-               <div className='w-50 form mx-auto m-5 shadow p-4'>
+               <div className=' form mx-auto m-5 shadow p-4'>
             <p className='text-center title'>Please Booking</p>
             <Form onSubmit={handleCheckedOut}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Your Name</Form.Label>
-                    <Form.Control ref={nameRef} type="text" placeholder="Enter Name" required/>
+                    <Form.Control ref={nameRef} type="text" placeholder="Enter Name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                    <Form.Control ref={emailRef} type="email" placeholder="Enter email"  />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Address</Form.Label>
-                    <Form.Control ref={addressRef} type="text" placeholder="Enter Your Address" required />
+                    <Form.Control ref={addressRef} type="text" placeholder="Enter Your Address"  />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Phone</Form.Label>
-                    <Form.Control ref={phoneRef} type="number" placeholder="Enter Your Phone Number" required />
+                    <Form.Control ref={phoneRef} type="number" placeholder="Enter Your Phone Number"  />
                 </Form.Group>
                     <p className='text-danger'>
                         {error}
                     </p>
-                <Button variant="primary" type="submit">
+                <Button  className="btn btn-primary w-50 mx-auto" type="submit">
                     Booking
                 </Button>
                

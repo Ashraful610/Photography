@@ -1,9 +1,15 @@
 .checkedOut{
-    margin-top: 350px;
+    margin-top: 150px;
+}
+.form{
+    width: 50%;
 }
 @media screen and (max-width:415px) {
     .checkedOut{
         margin-top: 100px;
+    }
+    .form{
+        width: 75%;
     }
     
 }
