@@ -15,11 +15,11 @@ const Banner = () => {
     setIndex(selectedIndex);
   };
     return (
-        <Carousel activeIndex={index} className='mt-5' onSelect={handleSelect}>
+        <Carousel activeIndex={index} style={{marginTop:'95px'}} onSelect={handleSelect}>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={img1}
+            src={'https://i.ibb.co/MBg3Jwy/image.png'}
             height='500px'
             alt="First slide"
           />
@@ -30,7 +30,7 @@ const Banner = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={img2}
+            src={'https://i.ibb.co/gjVCY6K/image.png'}
             height='500px'
             alt="Second slide"
           />
@@ -42,7 +42,7 @@ const Banner = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={img3}
+            src={'https://i.ibb.co/T4bvkS4/image.png'}
             height='500px'
             alt="Third slide"
           />
@@ -54,7 +54,7 @@ const Banner = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={img4}
+            src={'https://i.ibb.co/CB1MN1f/image.png'}
             height='500px'
             alt="Third slide"
           />
@@ -66,7 +66,7 @@ const Banner = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={img5}
+            src={'https://i.ibb.co/4PHv7bf/image.png'}
             height='500px'
             alt="Third slide"
           />
@@ -77,7 +77,7 @@ const Banner = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img  
-                src={img6} 
+                src={'https://i.ibb.co/6Y1wv24/image.png'} 
                 className="d-block w-100"
                 height='500px'
                 alt="Third slide"  
